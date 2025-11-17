@@ -1,5 +1,5 @@
-#define LIST_H
 #ifndef LIST_H
+#define LIST_H
 
 #include <iostream>
 #include "Node.h"
@@ -9,12 +9,22 @@ using namespace std;
 struct ListNode {
     Node data;
     ListNode* nextNode;
-}
+};  
 
-public:
+class List{
 
-    
+public: 
 
-private: 
+    List();
+    void addNode(int position, Node newData);
+    void printNodes();
+    int getSize();
+    int setPosition(int position, ListNode*& node);
+
+private:
+
+    int size;
+    ListNode* head;
+};
 
 #endif

@@ -1,3 +1,9 @@
+#include <iostream>
+#include "List.h"
+#include "Node.h"
+
+using namespace std;
+
 void menu(){
     bool run = true;
 
@@ -53,6 +59,14 @@ void menu(){
 
 
 int main(){
-
+    List list;
+    Node node1, node2, node3;
+    node1.index = 1;
+    node2.index = 2;
+    node3.index = 3;
+    list.addNode(1, node1);
+    list.addNode(2, node2);
+    list.addNode(3, node3);
+    list.printNodes();
     return 0;
 }
