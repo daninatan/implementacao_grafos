@@ -16,10 +16,11 @@ public:
 
 private:
 
+List nodes;
 int** adjacencyMatrix;
-int size;
+int size = 0;
 void expandMatrix(int**& ajacencyMatrix);
-
+void shrinkMatrix(int**& ajacencyMatrix, int index);
 };
 
 
