@@ -29,6 +29,29 @@ void List::addNode(int position, Node newData){
     size++;
 }
 
+void List::removeNode(int position){
+    ListNode* currentNode;
+    ListNode* removedNode;
+
+    if(getSize() > 0){
+        if(position == 1){
+            currentNode = head;
+            head = head->nextNode;
+            free(currentNode);        
+        }else{
+            setPosition(position - 1, currentNode);
+            removedNode = currentNode->nextNode;
+            currentNode->nextNode = removedNode->nextNode;
+            free(removedNode); 
+        }
+        size--;
+    }else{
+        cout << "Lista vazia";
+    }
+
+    
+}
+
 int List::setPosition(int position, ListNode*& node){
     ListNode* indexNode;
     indexNode = head;

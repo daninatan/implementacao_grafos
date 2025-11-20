@@ -68,5 +68,7 @@ int main(){
     list.addNode(2, node2);
     list.addNode(3, node3);
     list.printNodes();
+    list.removeNode(1);
+    list.printNodes();
     return 0;
 }

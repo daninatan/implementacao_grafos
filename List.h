@@ -17,6 +17,7 @@ public:
 
     List();
     void addNode(int position, Node newData);
+    void removeNode(int position);
     void printNodes();
     int getSize();
     int setPosition(int position, ListNode*& node);
